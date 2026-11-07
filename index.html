@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Học liệu số Khoa học lớp 4: Con người và Sức khỏe, học qua 5 video tình huống.">
+  <meta name="theme-color" content="#F45B2A">
+  <title>Con người và Sức khỏe | Cô Trần Nguyễn Thạch Truyền</title>
+  <link rel="preload" as="image" href="images/hero-banner.webp" fetchpriority="high">
+  <!-- prefers-reduced-motion được xử lý trong css/style.css để giảm chuyển động khi người dùng yêu cầu. -->
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Đi đến nội dung chính</a>
+
+  <!-- SECTION 0: LOADING SCREEN -->
+  <div id="loading-screen" class="loading-screen" role="status" aria-live="polite">
+    <!-- IMAGE: images/mascot-excited.webp — Bé Sói phấn khích trên màn hình tải -->
+    <img src="images/mascot-excited.webp" alt="Bé Sói Thông Thái đang vui vẻ nhảy lên" width="220" height="220">
+    <div class="loading-ring" aria-hidden="true"><span></span></div>
+    <p>Đang chuẩn bị bài học thú vị...</p>
+  </div>
+
+  <!-- THANH CÔNG CỤ VÀ TIẾN TRÌNH -->
+  <header class="topbar" aria-label="Thanh công cụ học tập">
+    <a class="brand" href="#home" aria-label="Về trang đầu">
+      <span class="brand-mark" aria-hidden="true">🐺</span>
+      <span class="brand-text"><small>HỌC LIỆU CỦA CÔ</small>Trần Nguyễn Thạch Truyền</span>
+    </a>
+    <div class="tracker" aria-live="polite">
+      <span id="tracker-label">Hành trình chưa bắt đầu</span>
+      <div class="tracker-bar" aria-hidden="true"><span id="tracker-fill"></span></div>
+    </div>
+    <nav class="quick-tools" aria-label="Công cụ hỗ trợ">
+      <button class="tool-btn" id="font-down" type="button" aria-label="Giảm cỡ chữ">A−</button>
+      <button class="tool-btn" id="font-up" type="button" aria-label="Tăng cỡ chữ">A+</button>
+      <button class="tool-btn" id="sound-toggle" type="button" aria-pressed="false" aria-label="Bật âm thanh">🔇</button>
+      <button class="tool-btn" id="theme-toggle" type="button" aria-pressed="false" aria-label="Bật chế độ tối">🌙</button>
+      <button class="tool-btn" id="share-btn" type="button" aria-label="Chia sẻ bài học">↗</button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- SECTION 1: HERO -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner container">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">KHOA HỌC LỚP 4 • HỌC QUA TÌNH HUỐNG THẬT</span>
+          <h1 id="hero-title">CON NGƯỜI<br><span>VÀ SỨC KHỎE</span></h1>
+          <p class="hero-description">Quan sát thật kĩ. Dừng đúng lúc. Tự mình lựa chọn. Mỗi câu chuyện là một thử thách để em biến kiến thức thành hành động khỏe mạnh và an toàn!</p>
+          <div class="topic-pills" aria-label="Ba nội dung chính">
+            <span>🥗 Dinh dưỡng</span>
+            <span>🛡️ An toàn thực phẩm</span>
+            <span>🏊 Phòng tránh đuối nước</span>
+          </div>
+          <div class="hero-guide">🐺 Sói Thông Thái đang chờ em ở 5 trạm khám phá. Sẵn sàng chưa?</div>
+          <div class="hero-actions"><a class="btn btn-primary btn-large" href="#roadmap">Mở bản đồ thử thách <span aria-hidden="true">→</span></a><div class="author-signature"><small>HỌC LIỆU SỐ CỦA</small><strong>Cô Trần Nguyễn Thạch Truyền</strong></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: BẢN ĐỒ HÀNH TRÌNH -->
+    <section id="roadmap" class="section roadmap-section" aria-labelledby="roadmap-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">5 TRẠM • 5 QUYẾT ĐỊNH CỦA CHÍNH EM</span>
+            <h2 id="roadmap-title">🗺️ Chọn trạm — mở thử thách!</h2>
+            <p>Mỗi trạm là một tình huống gần gũi. Em có dám dừng lại, quan sát và bảo vệ quyết định của mình?</p>
+          </div>
+          <!-- IMAGE: images/mascot-excited.webp — Bé Sói chỉ vào bản đồ -->
+          <img class="mascot mascot-small" src="images/mascot-excited.webp" alt="Bé Sói hào hứng giới thiệu hành trình" width="150" height="150" loading="lazy">
+        </div>
+        <div class="roadmap" aria-label="Bản đồ năm bài học">
+          <div class="road-path" aria-hidden="true"></div>
+          <a class="station station-1 reveal" href="#lesson-1" data-lesson="1">
+            <span class="station-number">1</span>
+            <!-- IMAGE: images/scene-kb1-lunch.webp — Minh họa trạm Bữa trưa của Minh -->
+            <img src="images/scene-kb1-lunch.webp" alt="Khay bữa trưa của Minh" width="320" height="180" loading="lazy">
+            <span class="station-copy"><strong>Bữa trưa của Minh</strong><small>Bữa ăn hợp lí</small></span>
+            <span class="station-status" aria-label="Chưa hoàn thành">○</span>
+          </a>
+          <a class="station station-2 reveal" href="#lesson-2" data-lesson="2">
+            <span class="station-number">2</span>
+            <!-- IMAGE: images/scene-kb2-milk.webp — Minh họa trạm Hộp sữa ở cửa hàng -->
+            <img src="images/scene-kb2-milk.webp" alt="Hai hộp sữa cần kiểm tra" width="320" height="180" loading="lazy">
+            <span class="station-copy"><strong>Hộp sữa ở cửa hàng</strong><small>Thực phẩm an toàn</small></span>
+            <span class="station-status" aria-label="Chưa hoàn thành">○</span>
+          </a>
+          <a class="station station-3 reveal" href="#lesson-3" data-lesson="3">
+            <span class="station-number">3</span>
+            <img src="images/scene-kb3-vegetables.webp" alt="Những bữa ăn thiếu rau quả" width="320" height="180" loading="lazy">
+            <span class="station-copy"><strong>Thực đơn thiếu rau quả</strong><small>Bệnh liên quan dinh dưỡng</small></span>
+            <span class="station-status" aria-label="Chưa hoàn thành">○</span>
+          </a>
+          <a class="station station-4 reveal" href="#lesson-4" data-lesson="4">
+            <span class="station-number">4</span>
+            <!-- IMAGE: images/scene-kb4-pond.webp — Minh họa trạm Quả bóng cạnh ao -->
+            <img src="images/scene-kb4-pond.webp" alt="Quả bóng rơi cạnh ao" width="320" height="180" loading="lazy">
+            <span class="station-copy"><strong>Quả bóng cạnh ao</strong><small>Phòng tránh đuối nước</small></span>
+            <span class="station-status" aria-label="Chưa hoàn thành">○</span>
+          </a>
+          <a class="station station-5 reveal" href="#lesson-5" data-lesson="5">
+            <span class="station-number">5</span>
+            <img src="images/scene-kb5-water.webp" alt="Nhóm bạn ở vùng nước lạ" width="320" height="180" loading="lazy">
+            <span class="station-copy"><strong>Lời rủ đến chỗ nước lạ</strong><small>Ôn tập an toàn nước</small></span>
+            <span class="station-status" aria-label="Chưa hoàn thành">○</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: NĂM BÀI HỌC -->
+    <section id="lessons" class="section lessons-section" aria-labelledby="lessons-title">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <div>
+            <span class="eyebrow">QUAN SÁT • DỪNG LẠI • SUY NGHĨ • ĐIỀU CHỈNH</span>
+            <h2 id="lessons-title">🎬 Dừng đúng lúc — nghĩ bằng chính em!</h2>
+            <p>Đừng vội tìm “đáp án”. Hãy quan sát, ghi quyết định của em rồi mới mở dữ kiện tiếp theo.</p>
+          </div>
+        </div>
+
+        <!-- BÀI HỌC 1 -->
+        <article id="lesson-1" class="lesson-card reveal" data-lesson="1" aria-labelledby="lesson-1-title">
+          <header class="lesson-header">
+            <div><span class="lesson-kicker">BÀI HỌC 01 • CHẾ ĐỘ ĂN UỐNG CÂN BẰNG</span><h3 id="lesson-1-title">Bữa trưa của Minh</h3></div>
+            <span class="lesson-badge">🥗 Dinh dưỡng</span>
+          </header>
+          <div class="scene-grid">
+            <!-- IMAGE: images/scene-kb1-lunch.webp — Khay cơm, gà rán, nước ngọt nhưng thiếu rau quả -->
+            <img class="scene-image" src="images/scene-kb1-lunch.webp" alt="Khay bữa trưa có cơm, gà rán và nước ngọt nhưng chưa có rau quả" width="960" height="540" loading="lazy">
+            <div class="mascot-callout"><img src="images/mascot-default.webp" alt="Bé Sói dẫn chuyện" width="120" height="120" loading="lazy"><p>Minh đã chọn xong bữa trưa. Em hãy quan sát thật kĩ trước khi nhận xét nhé!</p></div>
+          </div>
+          <div class="lesson-stepper">
+            <details class="step" open data-step="1"><summary><span>1</span><strong>Quan sát tình huống</strong><small>0–16 giây</small></summary><div class="step-content"><p>Minh có cơm, gà rán và nước ngọt; khay chưa có rau hoặc quả.</p>
+              <!-- VIDEO_KB1: Thay bằng iframe YouTube/embed tại đây. Cấu hình data-video-src nếu đã có link. -->
+              <div class="video-placeholder" data-video-id="KB1" data-segment="start" data-stop-time="16" style="--thumb:url('images/scene-kb1-lunch.webp')" role="group" aria-label="Video phần đầu kịch bản Bữa trưa của Minh"><div class="video-overlay"><span class="video-play" aria-hidden="true">▶</span><strong>Video sẽ được cập nhật tại đây</strong><small>Phần quan sát: 0–16 giây</small></div></div>
+              <button class="btn btn-secondary video-action" type="button" data-video-action="start">▶ Xem video đến điểm dừng</button>
+              <div class="question-strip"><strong>Câu hỏi cần chuẩn bị:</strong> Bữa trưa này đã hợp lí chưa? Em muốn thay đổi gì?</div></div></details>
+            <details class="step stop-step" data-step="2"><summary><span>2</span><strong>🛑 Điểm dừng — Suy nghĩ cá nhân</strong><small>Bắt buộc</small></summary><div class="step-content"><div class="warning-callout"><img src="images/mascot-warning.webp" alt="Bé Sói giơ biển dừng lại" width="130" height="130" loading="lazy"><div><strong>DỪNG LẠI NÀO!</strong><p>Đừng xem tiếp vội! Hãy suy nghĩ và viết câu trả lời của riêng em trước đã nhé!</p></div></div><h4>Bữa trưa này đã hợp lí chưa? Em muốn thay đổi gì?</h4><p class="task-note">Em thấy bữa ăn có những nhóm thức ăn nào, còn thiếu gì? Em sẽ đổi một phần nào?</p><label class="field-label" for="response-1">Ý kiến của em</label><textarea id="response-1" class="student-response" rows="4" placeholder="Em viết suy nghĩ của mình ở đây..."></textarea><label class="check-line"><input class="thinking-check" type="checkbox" aria-label="Xác nhận đã suy nghĩ bài 1"> Em đã suy nghĩ và có câu trả lời riêng.</label><button class="btn btn-danger confirm-thinking" type="button" disabled>Tôi đã suy nghĩ xong ✓</button><p class="inline-feedback" role="status"></p></div></details>
+            <details class="step locked" data-step="3"><summary><span>3</span><strong>Dữ kiện bổ sung</strong><small>22–30 giây</small></summary><div class="step-content"><p>Các lựa chọn rau, quả và nước lọc xuất hiện.</p>
+              <!-- VIDEO_KB1_CONTINUE: Thay bằng iframe YouTube/embed tại đây. -->
+              <div class="video-placeholder" data-video-id="KB1" data-segment="continue" data-start-time="22" style="--thumb:url('images/scene-kb1-lunch.webp')" role="group" aria-label="Video phần dữ kiện bổ sung kịch bản Bữa trưa của Minh"><div class="video-overlay"><span class="video-play" aria-hidden="true">▶</span><strong>Video sẽ được cập nhật tại đây</strong><small>Phần dữ kiện mới: từ giây 22</small></div></div><button class="btn btn-secondary video-action" type="button" data-video-action="continue">▶ Xem tiếp video</button><div class="data-card"><strong>🔎 Dữ kiện mới</strong><p>Có thể thêm rau, quả và thay nước ngọt bằng nước lọc.</p></div><div class="thinking-callout"><img src="images/mascot-thinking.webp" alt="Bé Sói đang suy nghĩ" width="105" height="105" loading="lazy"><p>Bây giờ em có muốn thay đổi câu trả lời không?</p></div></div></details>
+            <details class="step locked" data-step="4"><summary><span>4</span><strong>Phản hồi và điều chỉnh</strong><small>Quyết định cuối</small></summary><div class="step-content"><p>Nhận xét bữa ăn và đề xuất cách điều chỉnh, dựa vào nhóm thức ăn em quan sát được.</p><div class="decision-toggle" role="group" aria-label="Lựa chọn giữ hoặc sửa phương án"><button type="button" data-decision="keep">Giữ phương án</button><button type="button" data-decision="revise">Sửa phương án</button></div><div class="revision-box" hidden><label class="field-label" for="revision-1">Phương án mới và lí do điều chỉnh</label><textarea id="revision-1" class="revision-response" rows="3" placeholder="Em sẽ sửa như thế nào? Vì sao?"></textarea></div><button class="btn btn-success complete-lesson" type="button" disabled>Hoàn thành bài học ✓</button><p class="inline-feedback" role="status"></p></div></details>
+          </div>
+          <footer class="lesson-footer"><a class="btn btn-ghost" href="#roadmap">← Bản đồ</a><a class="btn btn-primary" href="#lesson-2">Bài tiếp theo →</a></footer>
+        </article>
+
+        <!-- BÀI HỌC 2 -->
+        <article id="lesson-2" class="lesson-card reveal" data-lesson="2" aria-labelledby="lesson-2-title">
+          <header class="lesson-header"><div><span class="lesson-kicker">BÀI HỌC 02 • THỰC PHẨM AN TOÀN</span><h3 id="lesson-2-title">Hộp sữa ở cửa hàng</h3></div><span class="lesson-badge purple">🛡️ An toàn thực phẩm</span></header>
+          <div class="scene-grid"><img class="scene-image" src="images/scene-kb2-milk.webp" alt="Hai hộp sữa, một hộp bị phồng và đã quá hạn dùng" width="960" height="540" loading="lazy"><div class="mascot-callout"><img src="images/mascot-default.webp" alt="Bé Sói dẫn chuyện" width="120" height="120" loading="lazy"><p>Ngày 12/04, Minh đang chọn sữa. Những chi tiết nào trên hộp cần được kiểm tra?</p></div></div>
+          <div class="lesson-stepper">
+            <details class="step" open data-step="1"><summary><span>1</span><strong>Quan sát tình huống</strong><small>0–16 giây</small></summary><div class="step-content"><p>Ngày 12/04, Minh chọn hộp sữa. Một hộp phồng, ghi hạn sử dụng 10/04.</p><!-- VIDEO_KB2: Thay bằng iframe YouTube/embed tại đây. --><div class="video-placeholder" data-video-id="KB2" data-segment="start" data-stop-time="16" style="--thumb:url('images/scene-kb2-milk.webp')" role="group" aria-label="Video phần đầu kịch bản Hộp sữa ở cửa hàng"><div class="video-overlay"><span class="video-play">▶</span><strong>Video sẽ được cập nhật tại đây</strong><small>Phần quan sát: 0–16 giây</small></div></div><button class="btn btn-secondary video-action" type="button" data-video-action="start">▶ Xem video đến điểm dừng</button><div class="question-strip"><strong>Câu hỏi cần chuẩn bị:</strong> Một hộp phồng, ghi hạn sử dụng 10/04. Có nên dùng không?</div></div></details>
+            <details class="step stop-step" data-step="2"><summary><span>2</span><strong>🛑 Điểm dừng — Suy nghĩ cá nhân</strong><small>Bắt buộc</small></summary><div class="step-content"><div class="warning-callout"><img src="images/mascot-warning.webp" alt="Bé Sói giơ biển dừng lại" width="130" height="130" loading="lazy"><div><strong>DỪNG LẠI NÀO!</strong><p>Quan sát bao bì và hạn dùng. Em hãy tự quyết định trước khi xem tiếp.</p></div></div><h4>Một hộp phồng, ghi hạn sử dụng 10/04. Có nên dùng không?</h4><p class="task-note">Nêu dấu hiệu em quan sát được và cách xử lí.</p><label class="field-label" for="response-2">Ý kiến của em</label><textarea id="response-2" class="student-response" rows="4" placeholder="Em viết quyết định và lí do..."></textarea><label class="check-line"><input class="thinking-check" type="checkbox" aria-label="Xác nhận đã suy nghĩ bài 2"> Em đã suy nghĩ và có câu trả lời riêng.</label><button class="btn btn-danger confirm-thinking" type="button" disabled>Tôi đã suy nghĩ xong ✓</button><p class="inline-feedback" role="status"></p></div></details>
+            <details class="step locked" data-step="3"><summary><span>3</span><strong>Dữ kiện bổ sung</strong><small>22–30 giây</small></summary><div class="step-content"><p>Một hộp khác còn nguyên vẹn, ghi hạn sử dụng 18/04.</p><!-- VIDEO_KB2_CONTINUE: Thay bằng iframe YouTube/embed tại đây. --><div class="video-placeholder" data-video-id="KB2" data-segment="continue" data-start-time="22" style="--thumb:url('images/scene-kb2-milk.webp')" role="group" aria-label="Video phần dữ kiện bổ sung kịch bản Hộp sữa ở cửa hàng"><div class="video-overlay"><span class="video-play">▶</span><strong>Video sẽ được cập nhật tại đây</strong><small>Phần dữ kiện mới: từ giây 22</small></div></div><button class="btn btn-secondary video-action" type="button" data-video-action="continue">▶ Xem tiếp video</button><div class="data-card"><strong>🔎 Dữ kiện mới</strong><p>Có thể đối chiếu tình trạng bao bì và hạn sử dụng của hai hộp sữa.</p></div><div class="thinking-callout"><img src="images/mascot-thinking.webp" alt="Bé Sói đang suy nghĩ" width="105" height="105" loading="lazy"><p>Dữ kiện mới có làm quyết định của em rõ hơn không?</p></div></div></details>
+            <details class="step locked" data-step="4"><summary><span>4</span><strong>Phản hồi và điều chỉnh</strong><small>Quyết định cuối</small></summary><div class="step-content"><p>Quyết định có dùng sản phẩm nghi không an toàn; giải thích bằng dấu hiệu bao bì và hạn dùng.</p><div class="decision-toggle" role="group" aria-label="Lựa chọn giữ hoặc sửa phương án"><button type="button" data-decision="keep">Giữ phương án</button><button type="button" data-decision="revise">Sửa phương án</button></div><div class="revision-box" hidden><label class="field-label" for="revision-2">Phương án mới và lí do điều chỉnh</label><textarea id="revision-2" class="revision-response" rows="3" placeholder="Em sẽ sửa như thế nào? Vì sao?"></textarea></div><button class="btn btn-success complete-lesson" type="button" disabled>Hoàn thành bài học ✓</button><p class="inline-feedback" role="status"></p></div></details>
+          </div><footer class="lesson-footer"><a class="btn btn-ghost" href="#roadmap">← Bản đồ</a><a class="btn btn-primary" href="#lesson-3">Bài tiếp theo →</a></footer>
+        </article>
+
+        <!-- BÀI HỌC 3 -->
+        <article id="lesson-3" class="lesson-card reveal" data-lesson="3" aria-labelledby="lesson-3-title">
+          <header class="lesson-header"><div><span class="lesson-kicker">BÀI HỌC 03 • MỘT SỐ BỆNH LIÊN QUAN DINH DƯỠNG</span><h3 id="lesson-3-title">Thực đơn thiếu rau quả</h3></div><span class="lesson-badge green">🍌 Thói quen ăn uống</span></header>
+          <div class="scene-grid"><img class="scene-image" src="images/scene-kb3-vegetables.webp" alt="Ba bữa ăn nhiều ngày liên tiếp đều thiếu rau và quả" width="960" height="540" loading="lazy"><div class="mascot-callout"><img src="images/mascot-default.webp" alt="Bé Sói dẫn chuyện" width="120" height="120" loading="lazy"><p>An thường bỏ rau và quả. Hãy giúp An chọn một thay đổi có thể làm ngay ở bữa tới.</p></div></div>
+          <div class="lesson-stepper">
+            <details class="step" open data-step="1"><summary><span>1</span><strong>Quan sát tình huống</strong><small>0–16 giây</small></summary><div class="step-content"><p>Nhiều ngày, An thường bỏ rau và quả. An muốn thay đổi một việc ở bữa tới.</p><!-- VIDEO_KB3: Thay bằng iframe YouTube/embed tại đây. --><div class="video-placeholder" data-video-id="KB3" data-segment="start" data-stop-time="16" style="--thumb:url('images/scene-kb3-vegetables.webp')" role="group" aria-label="Video phần đầu kịch bản Thực đơn thiếu rau quả"><div class="video-overlay"><span class="video-play">▶</span><strong>Video sẽ được cập nhật tại đây</strong><small>Phần quan sát: 0–16 giây</small></div></div><button class="btn btn-secondary video-action" type="button" data-video-action="start">▶ Xem video đến điểm dừng</button><div class="question-strip"><strong>Câu hỏi cần chuẩn bị:</strong> An muốn bắt đầu thay đổi một việc ở bữa tới. Em giúp An nào?</div></div></details>
+            <details class="step stop-step" data-step="2"><summary><span>2</span><strong>🛑 Điểm dừng — Suy nghĩ cá nhân</strong><small>Bắt buộc</small></summary><div class="step-content"><div class="warning-callout"><img src="images/mascot-warning.webp" alt="Bé Sói giơ biển dừng lại" width="130" height="130" loading="lazy"><div><strong>DỪNG LẠI NÀO!</strong><p>Chỉ dựa vào thói quen đã thấy, không suy đoán hay chẩn đoán bệnh cho An.</p></div></div><h4>An muốn bắt đầu thay đổi một việc ở bữa tới. Em giúp An nào?</h4><p class="task-note">Ghi thói quen em nhận thấy và đề xuất một thay đổi phù hợp.</p><label class="field-label" for="response-3">Ý kiến của em</label><textarea id="response-3" class="student-response" rows="4" placeholder="Em đề xuất cho An..."></textarea><label class="check-line"><input class="thinking-check" type="checkbox" aria-label="Xác nhận đã suy nghĩ bài 3"> Em đã suy nghĩ và có câu trả lời riêng.</label><button class="btn btn-danger confirm-thinking" type="button" disabled>Tôi đã suy nghĩ xong ✓</button><p class="inline-feedback" role="status"></p></div></details>
+            <details class="step locked" data-step="3"><summary><span>3</span><strong>Dữ kiện bổ sung</strong><small>22–30 giây</small></summary><div class="step-content"><p>Ở nhà hôm nay có rau, chuối và cơm.</p><!-- VIDEO_KB3_CONTINUE: Thay bằng iframe YouTube/embed tại đây. --><div class="video-placeholder" data-video-id="KB3" data-segment="continue" data-start-time="22" style="--thumb:url('images/scene-kb3-vegetables.webp')" role="group" aria-label="Video phần dữ kiện bổ sung kịch bản Thực đơn thiếu rau quả"><div class="video-overlay"><span class="video-play">▶</span><strong>Video sẽ được cập nhật tại đây</strong><small>Phần dữ kiện mới: từ giây 22</small></div></div><button class="btn btn-secondary video-action" type="button" data-video-action="continue">▶ Xem tiếp video</button><div class="data-card"><strong>🔎 Dữ kiện mới</strong><p>An có thể lựa chọn từ những thực phẩm sẵn có ở bữa hôm nay.</p></div><div class="thinking-callout"><img src="images/mascot-thinking.webp" alt="Bé Sói đang suy nghĩ" width="105" height="105" loading="lazy"><p>Em có muốn điều chỉnh đề xuất để An dễ thực hiện hơn không?</p></div></div></details>
+            <details class="step locked" data-step="4"><summary><span>4</span><strong>Phản hồi và điều chỉnh</strong><small>Quyết định cuối</small></summary><div class="step-content"><p>Chọn cách cải thiện thói quen ăn uống; nối kiến thức với thói quen, không chẩn đoán bệnh.</p><div class="decision-toggle" role="group" aria-label="Lựa chọn giữ hoặc sửa phương án"><button type="button" data-decision="keep">Giữ phương án</button><button type="button" data-decision="revise">Sửa phương án</button></div><div class="revision-box" hidden><label class="field-label" for="revision-3">Phương án mới và lí do điều chỉnh</label><textarea id="revision-3" class="revision-response" rows="3" placeholder="Em sẽ sửa như thế nào? Vì sao?"></textarea></div><button class="btn btn-success complete-lesson" type="button" disabled>Hoàn thành bài học ✓</button><p class="inline-feedback" role="status"></p></div></details>
+          </div><footer class="lesson-footer"><a class="btn btn-ghost" href="#roadmap">← Bản đồ</a><a class="btn btn-primary" href="#lesson-4">Bài tiếp theo →</a></footer>
+        </article>
+
+        <!-- BÀI HỌC 4 -->
+        <article id="lesson-4" class="lesson-card reveal" data-lesson="4" aria-labelledby="lesson-4-title">
+          <header class="lesson-header"><div><span class="lesson-kicker">BÀI HỌC 04 • PHÒNG TRÁNH ĐUỐI NƯỚC</span><h3 id="lesson-4-title">Quả bóng cạnh ao</h3></div><span class="lesson-badge blue">🛟 An toàn nước</span></header>
+          <div class="scene-grid"><img class="scene-image" src="images/scene-kb4-pond.webp" alt="Quả bóng nổi dưới ao, hai bạn nhỏ đứng trên bờ" width="960" height="540" loading="lazy"><div class="mascot-callout"><img src="images/mascot-default.webp" alt="Bé Sói dẫn chuyện" width="120" height="120" loading="lazy"><p>Quả bóng rơi xuống ao và không có người lớn gần đó. Em sẽ xử lí thế nào?</p></div></div>
+          <div class="lesson-stepper">
+            <details class="step" open data-step="1"><summary><span>1</span><strong>Quan sát tình huống</strong><small>0–16 giây</small></summary><div class="step-content"><p>Quả bóng rơi xuống ao. Không thấy người lớn gần đó. Bạn nói: “Nước trông nông, mình xuống lấy nhé?”</p><!-- VIDEO_KB4: Thay bằng iframe YouTube/embed tại đây. --><div class="video-placeholder" data-video-id="KB4" data-segment="start" data-stop-time="16" style="--thumb:url('images/scene-kb4-pond.webp')" role="group" aria-label="Video phần đầu kịch bản Quả bóng cạnh ao"><div class="video-overlay"><span class="video-play">▶</span><strong>Video sẽ được cập nhật tại đây</strong><small>Phần quan sát: 0–16 giây</small></div></div><button class="btn btn-secondary video-action" type="button" data-video-action="start">▶ Xem video đến điểm dừng</button><div class="question-strip"><strong>Câu hỏi cần chuẩn bị:</strong> “Nước trông nông, mình xuống lấy nhé?” — Em sẽ làm gì?</div></div></details>
+            <details class="step stop-step" data-step="2"><summary><span>2</span><strong>🛑 Điểm dừng — Suy nghĩ cá nhân</strong><small>Bắt buộc</small></summary><div class="step-content"><div class="warning-callout"><img src="images/mascot-warning.webp" alt="Bé Sói giơ biển dừng lại" width="130" height="130" loading="lazy"><div><strong>DỪNG LẠI NÀO!</strong><p>Đừng xem tiếp vội! Hãy nhận diện nguy cơ và tự chọn cách an toàn.</p></div></div><h4>Nước trông nông, mình xuống lấy nhé? Em sẽ làm gì?</h4><p class="task-note">Nêu nguy cơ em nhận ra và cách xử lí an toàn.</p><label class="field-label" for="response-4">Ý kiến của em</label><textarea id="response-4" class="student-response" rows="4" placeholder="Em sẽ làm gì và vì sao?"></textarea><label class="check-line"><input class="thinking-check" type="checkbox" aria-label="Xác nhận đã suy nghĩ bài 4"> Em đã suy nghĩ và có câu trả lời riêng.</label><button class="btn btn-danger confirm-thinking" type="button" disabled>Tôi đã suy nghĩ xong ✓</button><p class="inline-feedback" role="status"></p></div></details>
+            <details class="step locked" data-step="3"><summary><span>3</span><strong>Dữ kiện bổ sung</strong><small>22–30 giây</small></summary><div class="step-content"><p>Bờ ao trơn, có thể tìm người lớn gần đó.</p><!-- VIDEO_KB4_CONTINUE: Thay bằng iframe YouTube/embed tại đây. --><div class="video-placeholder" data-video-id="KB4" data-segment="continue" data-start-time="22" style="--thumb:url('images/scene-kb4-pond.webp')" role="group" aria-label="Video phần dữ kiện bổ sung kịch bản Quả bóng cạnh ao"><div class="video-overlay"><span class="video-play">▶</span><strong>Video sẽ được cập nhật tại đây</strong><small>Phần dữ kiện mới: từ giây 22</small></div></div><button class="btn btn-secondary video-action" type="button" data-video-action="continue">▶ Xem tiếp video</button><div class="data-card"><strong>🔎 Dữ kiện mới</strong><p>Bờ trơn làm tăng nguy cơ; tìm người lớn là một lựa chọn có thể thực hiện.</p></div><div class="thinking-callout"><img src="images/mascot-thinking.webp" alt="Bé Sói đang suy nghĩ" width="105" height="105" loading="lazy"><p>Dữ kiện mới có giúp em bảo vệ phương án an toàn hơn không?</p></div></div></details>
+            <details class="step locked" data-step="4"><summary><span>4</span><strong>Phản hồi và điều chỉnh</strong><small>Quyết định cuối</small></summary><div class="step-content"><p>Chọn cách xử lí khi không có người lớn gần đó; giải thích nguy cơ và bảo vệ phương án an toàn.</p><div class="decision-toggle" role="group" aria-label="Lựa chọn giữ hoặc sửa phương án"><button type="button" data-decision="keep">Giữ phương án</button><button type="button" data-decision="revise">Sửa phương án</button></div><div class="revision-box" hidden><label class="field-label" for="revision-4">Phương án mới và lí do điều chỉnh</label><textarea id="revision-4" class="revision-response" rows="3" placeholder="Em sẽ sửa như thế nào? Vì sao?"></textarea></div><button class="btn btn-success complete-lesson" type="button" disabled>Hoàn thành bài học ✓</button><p class="inline-feedback" role="status"></p></div></details>
+          </div><footer class="lesson-footer"><a class="btn btn-ghost" href="#roadmap">← Bản đồ</a><a class="btn btn-primary" href="#lesson-5">Bài tiếp theo →</a></footer>
+        </article>
+
+        <!-- BÀI HỌC 5 -->
+        <article id="lesson-5" class="lesson-card reveal" data-lesson="5" aria-labelledby="lesson-5-title">
+          <header class="lesson-header"><div><span class="lesson-kicker">BÀI HỌC 05 • ÔN TẬP PHÒNG TRÁNH ĐUỐI NƯỚC</span><h3 id="lesson-5-title">Lời rủ đến chỗ nước lạ</h3></div><span class="lesson-badge pink">⚠️ Quyết định an toàn</span></header>
+          <div class="scene-grid"><img class="scene-image" src="images/scene-kb5-water.webp" alt="Nhóm bạn đứng gần vùng nước lạ và một biển cảnh báo" width="960" height="540" loading="lazy"><div class="mascot-callout"><img src="images/mascot-default.webp" alt="Bé Sói dẫn chuyện" width="120" height="120" loading="lazy"><p>Một lời rủ có vẻ quen thuộc chưa chắc đã an toàn. Em hãy để ý mọi dấu hiệu xung quanh.</p></div></div>
+          <div class="lesson-stepper">
+            <details class="step" open data-step="1"><summary><span>1</span><strong>Quan sát tình huống</strong><small>0–16 giây</small></summary><div class="step-content"><p>Nhóm bạn đi qua vùng nước chưa quen. Bạn rủ: “Mọi khi người ta vẫn chơi ở đây mà!”</p><!-- VIDEO_KB5: Thay bằng iframe YouTube/embed tại đây. --><div class="video-placeholder" data-video-id="KB5" data-segment="start" data-stop-time="16" style="--thumb:url('images/scene-kb5-water.webp')" role="group" aria-label="Video phần đầu kịch bản Lời rủ đến chỗ nước lạ"><div class="video-overlay"><span class="video-play">▶</span><strong>Video sẽ được cập nhật tại đây</strong><small>Phần quan sát: 0–16 giây</small></div></div><button class="btn btn-secondary video-action" type="button" data-video-action="start">▶ Xem video đến điểm dừng</button><div class="question-strip"><strong>Câu hỏi cần chuẩn bị:</strong> Bạn rủ em xuống nước. Em sẽ nói gì?</div></div></details>
+            <details class="step stop-step" data-step="2"><summary><span>2</span><strong>🛑 Điểm dừng — Suy nghĩ cá nhân</strong><small>Bắt buộc</small></summary><div class="step-content"><div class="warning-callout"><img src="images/mascot-warning.webp" alt="Bé Sói giơ biển dừng lại" width="130" height="130" loading="lazy"><div><strong>DỪNG LẠI NÀO!</strong><p>So sánh các lựa chọn và chuẩn bị lời nói rõ ràng để giữ an toàn cho cả nhóm.</p></div></div><h4>Bạn rủ em xuống nước. Em sẽ nói gì?</h4><p class="task-note">Nêu lựa chọn và giải thích vì sao em chọn như vậy.</p><label class="field-label" for="response-5">Ý kiến của em</label><textarea id="response-5" class="student-response" rows="4" placeholder="Em sẽ nói với bạn..."></textarea><label class="check-line"><input class="thinking-check" type="checkbox" aria-label="Xác nhận đã suy nghĩ bài 5"> Em đã suy nghĩ và có câu trả lời riêng.</label><button class="btn btn-danger confirm-thinking" type="button" disabled>Tôi đã suy nghĩ xong ✓</button><p class="inline-feedback" role="status"></p></div></details>
+            <details class="step locked" data-step="3"><summary><span>3</span><strong>Dữ kiện bổ sung</strong><small>22–30 giây</small></summary><div class="step-content"><p>Các bạn nhìn thấy biển cảnh báo nguy hiểm.</p><!-- VIDEO_KB5_CONTINUE: Thay bằng iframe YouTube/embed tại đây. --><div class="video-placeholder" data-video-id="KB5" data-segment="continue" data-start-time="22" style="--thumb:url('images/scene-kb5-water.webp')" role="group" aria-label="Video phần dữ kiện bổ sung kịch bản Lời rủ đến chỗ nước lạ"><div class="video-overlay"><span class="video-play">▶</span><strong>Video sẽ được cập nhật tại đây</strong><small>Phần dữ kiện mới: từ giây 22</small></div></div><button class="btn btn-secondary video-action" type="button" data-video-action="continue">▶ Xem tiếp video</button><div class="data-card"><strong>🔎 Dữ kiện mới</strong><p>Biển cảnh báo là thông tin quan trọng cần đưa vào quyết định.</p></div><div class="thinking-callout"><img src="images/mascot-thinking.webp" alt="Bé Sói đang suy nghĩ" width="105" height="105" loading="lazy"><p>Em sẽ giữ hay sửa lời nói sau khi thấy biển cảnh báo?</p></div></div></details>
+            <details class="step locked" data-step="4"><summary><span>4</span><strong>Phản hồi và điều chỉnh</strong><small>Quyết định cuối</small></summary><div class="step-content"><p>So sánh lựa chọn, giải thích và điều chỉnh khi có dữ kiện mới về môi trường.</p><div class="decision-toggle" role="group" aria-label="Lựa chọn giữ hoặc sửa phương án"><button type="button" data-decision="keep">Giữ phương án</button><button type="button" data-decision="revise">Sửa phương án</button></div><div class="revision-box" hidden><label class="field-label" for="revision-5">Phương án mới và lí do điều chỉnh</label><textarea id="revision-5" class="revision-response" rows="3" placeholder="Em sẽ sửa như thế nào? Vì sao?"></textarea></div><button class="btn btn-success complete-lesson" type="button" disabled>Hoàn thành bài học ✓</button><p class="inline-feedback" role="status"></p></div></details>
+          </div><footer class="lesson-footer"><a class="btn btn-ghost" href="#roadmap">← Bản đồ</a><a class="btn btn-primary" href="#worksheet">Đến phiếu học tập →</a></footer>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 4: PHIẾU HỌC TẬP -->
+    <section id="worksheet" class="section worksheet-section" aria-labelledby="worksheet-title">
+      <div class="container">
+        <div class="section-heading reveal"><div><span class="eyebrow">SUY NGHĨ CỦA EM LÀ MINH CHỨNG QUAN TRỌNG</span><h2 id="worksheet-title">📋 Viết ra điều em thật sự nghĩ</h2><p>Ghi rõ vấn đề, kiến thức đã dùng, phương án và lí do. Em có thể in phiếu để nộp cho cô.</p></div><img class="mascot mascot-small" src="images/mascot-thinking.webp" alt="Bé Sói đang suy nghĩ cùng phiếu học tập" width="150" height="150" loading="lazy"></div>
+        <form id="worksheet-form" class="worksheet reveal" autocomplete="off">
+          <header><div><span>PHIẾU PHẢN HỒI CÁ NHÂN</span><h3>Con người và Sức khỏe</h3></div><span class="worksheet-icon" aria-hidden="true">📋</span></header>
+          <div class="student-info"><label>Họ tên<input id="student-name" type="text" aria-label="Họ và tên học sinh" placeholder="Họ và tên học sinh"></label><label>Lớp<input id="student-class" type="text" aria-label="Lớp của học sinh" placeholder="Ví dụ: 4A"></label><label>Kịch bản<select id="scenario-select" aria-label="Chọn kịch bản"><option value="1">1. Bữa trưa của Minh</option><option value="2">2. Hộp sữa ở cửa hàng</option><option value="3">3. Thực đơn thiếu rau quả</option><option value="4">4. Quả bóng cạnh ao</option><option value="5">5. Lời rủ đến chỗ nước lạ</option></select></label></div>
+          <div class="worksheet-grid">
+            <label class="worksheet-field orange"><span><b>1</b> Vấn đề em nhận ra</span><textarea id="ws-problem" aria-label="Vấn đề em nhận ra" rows="5" placeholder="Dữ kiện nào khiến em thấy cần xử lí?"></textarea></label>
+            <label class="worksheet-field purple"><span><b>2</b> Kiến thức em đã dùng</span><textarea id="ws-knowledge" aria-label="Kiến thức em đã dùng" rows="5" placeholder="Em đã vận dụng kiến thức, kĩ năng nào?"></textarea></label>
+            <label class="worksheet-field green"><span><b>3</b> Phương án em chọn</span><textarea id="ws-option" aria-label="Phương án em chọn" rows="5" placeholder="Em chọn cách xử lí nào?"></textarea></label>
+            <label class="worksheet-field pink"><span><b>4</b> Lí do và điều chỉnh</span><textarea id="ws-reason" aria-label="Lí do và điều chỉnh" rows="5" placeholder="Vì sao em chọn? Em giữ hay sửa phương án?"></textarea></label>
+          </div>
+          <div class="worksheet-actions"><button id="print-worksheet" class="btn btn-primary" type="button">In phiếu 🖨️</button><button id="clear-worksheet" class="btn btn-ghost" type="button">Xóa trắng 🗑️</button></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- SECTION 5: BẢNG NĂNG LỰC -->
+    <section id="competencies" class="section competency-section" aria-labelledby="competency-title">
+      <div class="container">
+        <div class="section-heading reveal"><div><span class="eyebrow">CHẠM VÀO TỪNG THẺ ĐỂ TỰ SOI 3 MỨC</span><h2 id="competency-title">🏆 Bốn năng lực giúp em xử lí tình huống</h2><p>Không chỉ chọn đúng — em còn cần nhận ra vấn đề, dùng kiến thức, giải thích và biết điều chỉnh.</p></div><img class="mascot mascot-small" src="images/mascot-excited.webp" alt="Bé Sói hào hứng với các huy hiệu năng lực" width="150" height="150" loading="lazy"></div>
+        <div class="competency-grid">
+          <button class="competency-card reveal orange" type="button" aria-expanded="false"><span class="card-inner"><span class="card-front"><img src="images/badge-nd.png" alt="Huy hiệu kính lúp màu cam" width="128" height="128" loading="lazy"><small>SIÊU NĂNG LỰC 01</small><strong>🔍 Nhận diện và làm rõ vấn đề</strong><span>Phát hiện dữ kiện quan trọng và nêu rõ vấn đề cần xử lí.</span><em>Chạm để xem 3 mức ↻</em></span><span class="card-back"><strong>Ba mức biểu hiện</strong><span>⭐ <b>Cần cố gắng:</b> Nhận ra một số dữ kiện nhưng chưa nêu rõ vấn đề; cần gợi ý.</span><span>⭐⭐ <b>Đạt:</b> Tự xác định được vấn đề chính và dữ kiện liên quan.</span><span>⭐⭐⭐ <b>Tốt:</b> Xác định chính xác vấn đề, mối liên hệ giữa các dữ kiện và yêu cầu cần xử lí.</span><em>Chạm để quay lại ↻</em></span></span></button>
+          <button class="competency-card reveal purple" type="button" aria-expanded="false"><span class="card-inner"><span class="card-front"><img src="images/badge-hd.png" alt="Huy hiệu bộ não và bóng đèn màu tím" width="128" height="128" loading="lazy"><small>SIÊU NĂNG LỰC 02</small><strong>🧠 Huy động kiến thức, kĩ năng</strong><span>Chọn và dùng kiến thức đã học để phân tích tình huống.</span><em>Chạm để xem 3 mức ↻</em></span><span class="card-back"><strong>Ba mức biểu hiện</strong><span>⭐ <b>Cần cố gắng:</b> Nêu được một phần kiến thức nhưng kết nối với dữ kiện còn hạn chế; cần gợi ý.</span><span>⭐⭐ <b>Đạt:</b> Chọn và sử dụng được kiến thức, kĩ năng phù hợp để giải thích nội dung chính.</span><span>⭐⭐⭐ <b>Tốt:</b> Kết nối rõ kiến thức với nhiều dữ kiện liên quan; sửa nhận định khi xuất hiện thông tin mới.</span><em>Chạm để quay lại ↻</em></span></span></button>
+          <button class="competency-card reveal green" type="button" aria-expanded="false"><span class="card-inner"><span class="card-front"><img src="images/badge-dx.png" alt="Huy hiệu mảnh ghép màu xanh lá" width="128" height="128" loading="lazy"><small>SIÊU NĂNG LỰC 03</small><strong>💡 Đề xuất và lựa chọn cách xử lí</strong><span>Đưa ra phương án phù hợp và biết cách thực hiện.</span><em>Chạm để xem 3 mức ↻</em></span><span class="card-back"><strong>Ba mức biểu hiện</strong><span>⭐ <b>Cần cố gắng:</b> Có phương án nhưng còn chung chung, chưa phù hợp đầy đủ hoặc cần hỗ trợ.</span><span>⭐⭐ <b>Đạt:</b> Đề xuất hoặc chọn được cách xử lí phù hợp và nêu được cách thực hiện cơ bản.</span><span>⭐⭐⭐ <b>Tốt:</b> Đề xuất cách xử lí phù hợp, thực hiện được; biết điều chỉnh khi điều kiện thay đổi.</span><em>Chạm để quay lại ↻</em></span></span></button>
+          <button class="competency-card reveal pink" type="button" aria-expanded="false"><span class="card-inner"><span class="card-front"><img src="images/badge-gt.png" alt="Huy hiệu bảng kiểm màu hồng" width="128" height="128" loading="lazy"><small>SIÊU NĂNG LỰC 04</small><strong>📝 Giải thích, đánh giá và điều chỉnh</strong><span>Nêu lí do, nhận xét và sửa phương án khi cần.</span><em>Chạm để xem 3 mức ↻</em></span><span class="card-back"><strong>Ba mức biểu hiện</strong><span>⭐ <b>Cần cố gắng:</b> Nêu lí do đơn giản nhưng căn cứ chưa rõ; cần gợi ý khi nhận xét hoặc sửa phương án.</span><span>⭐⭐ <b>Đạt:</b> Giải thích được lí do lựa chọn, nhận xét được cách xử lí và sửa khi có yêu cầu.</span><span>⭐⭐⭐ <b>Tốt:</b> Giải thích bằng dữ kiện và kiến thức rõ ràng; so sánh, điều chỉnh và liên hệ với tình huống tương tự.</span><em>Chạm để quay lại ↻</em></span></span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: HƯỚNG DẪN GIÁO VIÊN -->
+    <section id="teacher-guide" class="section teacher-section" aria-labelledby="teacher-title">
+      <div class="container">
+        <details class="teacher-guide reveal">
+          <summary><span><small>TÀI LIỆU TỔ CHỨC DẠY HỌC</small><strong id="teacher-title">👩‍🏫 Hướng dẫn cho Giáo viên</strong></span><span class="expand-icon" aria-hidden="true">＋</span></summary>
+          <div class="teacher-content">
+            <div class="process-grid">
+              <article><span>1</span><h3>Chuẩn bị</h3><p>Giáo viên kiểm tra video, phụ đề, bản ngoại tuyến và tranh thay thế; in phiếu với các ô: vấn đề/dữ kiện, kiến thức, phương án, căn cứ và điều chỉnh. Chọn một hoặc hai biểu hiện trọng tâm để quan sát sâu; xác định câu trả lời nào cần học sinh ghi cá nhân.</p></article>
+              <article><span>2</span><h3>Quan sát và nhận diện</h3><p>Trước khi chiếu, giáo viên giao yêu cầu ngắn về điều cần tìm. Chiếu đến giây 16 và tạm dừng, cho học sinh ghi ý kiến cá nhân trước khi trao đổi. Giáo viên hỏi dữ kiện nào khiến học sinh thấy cần xử lí, tránh kể lại toàn bộ cảnh.</p></article>
+              <article><span>3</span><h3>Đề xuất, đối chiếu và giải thích</h3><p>Học sinh đề xuất cách làm và nêu căn cứ từ kiến thức đã học. Giáo viên mời hai phương án khác nhau, yêu cầu nhóm chỉ ra dữ kiện mỗi phương án đã dùng hoặc bỏ sót. Giáo viên không xác nhận đáp án quá sớm, nhất là khi video còn dữ kiện bổ sung.</p></article>
+              <article><span>4</span><h3>Phản hồi, điều chỉnh và đánh giá</h3><p>Giáo viên phát tiếp từ giây 22 để đưa dữ kiện bổ sung hoặc phát lại đoạn cần thiết, yêu cầu học sinh ghi “giữ/sửa phương án” và lí do. Thu phiếu cá nhân, đánh giá theo bốn biểu hiện, phản hồi một điểm làm tốt và một thao tác cần cải thiện. Kết thúc bằng nguyên tắc có thể vận dụng sang tình huống gần gũi, không đồng nhất việc trả lời đúng với hành vi thực tế ngoài lớp.</p></article>
+            </div>
+            <div class="matrix-wrap"><h3>Ma trận 5 video tình huống</h3><div class="table-scroll"><table><thead><tr><th>Kịch bản</th><th>Bài học</th><th>Quyết định</th><th>Minh chứng cần thu</th></tr></thead><tbody><tr><td>1. Bữa trưa của Minh</td><td>Chế độ ăn cân bằng</td><td>Nhận xét bữa ăn; đề xuất điều chỉnh</td><td>Dữ kiện nhóm thức ăn, lí do sửa</td></tr><tr><td>2. Hộp sữa ở cửa hàng</td><td>Thực phẩm an toàn</td><td>Dùng hay không sản phẩm nghi vấn</td><td>Dấu hiệu bao bì, giải thích</td></tr><tr><td>3. Thực đơn thiếu rau quả</td><td>Bệnh liên quan dinh dưỡng</td><td>Cải thiện thói quen ăn uống</td><td>Nối kiến thức với thói quen</td></tr><tr><td>4. Quả bóng cạnh ao</td><td>Phòng tránh đuối nước</td><td>Xử lí khi không có người lớn</td><td>Nguy cơ, phương án an toàn</td></tr><tr><td>5. Lời rủ đến chỗ nước lạ</td><td>Ôn tập phòng tránh đuối nước</td><td>Sửa phương án khi có dữ kiện mới</td><td>So sánh, điều chỉnh</td></tr></tbody></table></div></div>
+            <button id="reset-progress" class="btn btn-ghost" type="button">Đặt lại toàn bộ tiến trình</button>
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- SECTION 7: FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div><strong class="footer-author">Cô Trần Nguyễn Thạch Truyền</strong><span>Sản phẩm học liệu thuộc Luận văn Thạc sĩ</span><p>“Thiết kế và sử dụng video tình huống trong dạy học chủ đề ‘Con người và Sức khỏe’ môn Khoa học lớp 4 theo hướng phát triển năng lực vận dụng kiến thức, kĩ năng đã học cho học sinh”</p><span>Trường Đại học Sư phạm — Đại học Đà Nẵng</span><small>© 2024–2025</small></div>
+      <a class="btn btn-primary" href="#home">↑ Về đầu trang</a>
+    </div>
+  </footer>
+
+  <!-- THÔNG BÁO NHỎ -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- HỘP ĂN MỪNG HOÀN THÀNH -->
+  <div id="celebration" class="celebration" role="dialog" aria-modal="true" aria-labelledby="celebration-title" hidden>
+    <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
+    <div class="celebration-card">
+      <button class="celebration-close" type="button" aria-label="Đóng thông báo">×</button>
+      <img src="images/mascot-celebrate.webp" alt="Bé Sói tung hoa giấy ăn mừng" width="250" height="250">
+      <h2 id="celebration-title">Tuyệt vời!</h2>
+      <p>Em đã hoàn thành tất cả bài học! 🎉🎊</p>
+      <strong class="explorer-badge">🏅 Nhà khám phá Sức khỏe</strong>
+    </div>
+  </div>
+
+  <noscript><div class="noscript">Trang học liệu cần JavaScript để mở khóa tuần tự các bước và lưu tiến trình. Hãy bật JavaScript rồi tải lại trang.</div></noscript>
+</body>
+</html>
