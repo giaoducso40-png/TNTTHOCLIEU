@@ -23,8 +23,8 @@
   --shadow: 0 14px 36px rgba(24, 68, 96, .12);
   --shadow-hover: 0 18px 42px rgba(24, 68, 96, .18);
   --radius: 24px;
-  --font-body: "Nunito", "Segoe UI", Arial, sans-serif;
-  --font-display: "Arial Rounded MT Bold", "Trebuchet MS", "Segoe UI", sans-serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans", sans-serif;
+  --font-display: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans", sans-serif;
 }
 
 *,
@@ -34,6 +34,9 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 92px;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -45,7 +48,14 @@ body {
     radial-gradient(circle at 6% 14%, rgba(255, 201, 40, .14), transparent 24rem),
     radial-gradient(circle at 96% 42%, rgba(32, 182, 122, .1), transparent 28rem),
     var(--page);
-  font: 500 17px/1.65 var(--font-body);
+  font: 500 16px/1.6 var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
   transition: background .25s ease, color .25s ease;
 }
 
@@ -71,9 +81,12 @@ a { color: inherit; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2, h3 {
   font-family: var(--font-display);
-  line-height: 1.12;
-  letter-spacing: -.025em;
+  line-height: 1.18;
+  letter-spacing: -.015em;
+  text-wrap: balance;
 }
+
+p, li, td, th, label { text-wrap: pretty; }
 
 :focus-visible {
   outline: 4px solid rgba(7, 140, 135, .38);
@@ -332,29 +345,33 @@ body.dark .topbar { background: rgba(24, 38, 61, .94); border-color: var(--line)
 .author-signature strong { color: var(--ink); font-size: 18px; }
 
 /* Section và tiêu đề */
-.section { padding: 88px 0; }
+.section { padding: 72px 0; }
 .roadmap-section { background: linear-gradient(180deg, var(--page), var(--sky)); }
 .lessons-section { background: linear-gradient(180deg, var(--sky), var(--page)); }
 .worksheet-section { background: var(--cream); }
 .competency-section { background: linear-gradient(180deg, var(--page), #f4efff); }
 body.dark .competency-section { background: linear-gradient(180deg, var(--page), #211d3a); }
-.teacher-section { background: var(--sky); }
+.teacher-section { padding: 56px 0; background: var(--sky); }
 .section-heading {
   display: flex;
   gap: 30px;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
 }
 .section-heading.centered { justify-content: center; text-align: center; }
+.section-heading.centered > div { max-width: 1100px; }
 .section-heading > div { max-width: 850px; }
 .section-heading h2 {
   margin-bottom: 10px;
   color: var(--ink);
-  font-size: clamp(34px, 5vw, 57px);
-  font-weight: 950;
+  font-size: clamp(32px, 3.2vw, 46px);
+  font-weight: 800;
+  line-height: 1.18;
+  overflow-wrap: normal;
 }
-.section-heading p { margin-bottom: 0; color: var(--muted); font-size: 18px; font-weight: 650; }
+.section-heading > div { min-width: 0; }
+.section-heading p { margin-bottom: 0; color: var(--muted); font-size: 17px; font-weight: 600; line-height: 1.55; }
 .mascot-small { flex: 0 0 140px; width: 140px; max-height: 150px; object-fit: contain; }
 
 /* Bản đồ 5 trạm dạng lưới ổn định */
@@ -716,25 +733,54 @@ body.dark .decision-toggle button.is-selected { background: #173b31; }
   box-shadow: var(--shadow);
 }
 .teacher-guide > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
   padding: 24px 28px;
   list-style: none;
   color: #fff;
   background: linear-gradient(115deg, var(--violet), #8c6ce9);
   font-family: var(--font-display);
-  font-size: clamp(24px, 4vw, 38px);
-  font-weight: 950;
+  font-size: clamp(22px, 2.2vw, 32px);
+  font-weight: 800;
+  line-height: 1.25;
   cursor: pointer;
 }
 .teacher-guide > summary::-webkit-details-marker { display: none; }
+.teacher-guide > summary > span:first-child {
+  display: grid;
+  min-width: 0;
+  gap: 5px;
+}
+.teacher-guide > summary small {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: .08em;
+}
+.teacher-guide > summary strong {
+  display: block;
+  overflow-wrap: normal;
+}
+.expand-icon {
+  flex: 0 0 auto;
+  font-size: 1.25em;
+  line-height: 1;
+}
 .teacher-content { padding: 28px; }
-.teacher-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.teacher-steps article {
+.teacher-steps,
+.process-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.teacher-steps article,
+.process-grid article {
   padding: 20px;
   border: 1px solid var(--line);
   border-radius: 17px;
   background: var(--page);
 }
-.teacher-steps article > span {
+.teacher-steps article > span,
+.process-grid article > span {
   display: grid;
   width: 36px;
   aspect-ratio: 1;
@@ -744,8 +790,10 @@ body.dark .decision-toggle button.is-selected { background: #173b31; }
   background: var(--violet);
   font-weight: 950;
 }
-.teacher-steps h3 { margin: 10px 0 8px; font-size: 21px; }
-.teacher-steps p { margin: 0; color: var(--muted); }
+.teacher-steps h3,
+.process-grid h3 { margin: 10px 0 8px; font-size: 21px; }
+.teacher-steps p,
+.process-grid p { margin: 0; color: var(--muted); }
 .matrix-wrap { margin: 28px 0; }
 .matrix-wrap h3 { font-size: 26px; }
 .table-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 15px; }
@@ -764,7 +812,11 @@ tbody tr:nth-child(even) { background: var(--page); }
 }
 .footer-content { display: flex; gap: 28px; align-items: center; justify-content: space-between; }
 .footer-content > div { display: grid; gap: 7px; max-width: 850px; }
-.footer-author { color: #ffda57; font: 950 clamp(28px, 4vw, 42px)/1.1 var(--font-display); }
+.footer-author {
+  color: #ffda57;
+  font: 800 clamp(26px, 2.7vw, 38px)/1.22 var(--font-display);
+  text-wrap: balance;
+}
 .footer-content p { margin: 0; }
 .footer-content small { opacity: .8; }
 .toast {
@@ -849,6 +901,8 @@ tbody tr:nth-child(even) { background: var(--page); }
   .station:last-child { grid-column: 1 / -1; }
   .scene-grid { grid-template-columns: 1fr; }
   .mascot-callout { margin-top: -4px; }
+  .section-heading h2 { font-size: clamp(31px, 4.6vw, 43px); }
+  .teacher-guide > summary { font-size: clamp(22px, 3.2vw, 30px); }
 }
 
 /* Responsive mobile */
@@ -879,11 +933,11 @@ tbody tr:nth-child(even) { background: var(--page); }
   .hero-guide { font-size: 14px; }
   .hero-actions { display: grid; }
   .author-signature strong { font-size: 17px; }
-  .section { padding: 60px 0; }
-  .section-heading { align-items: flex-end; gap: 10px; margin-bottom: 26px; }
-  .section-heading h2 { font-size: clamp(31px, 10vw, 45px); }
-  .section-heading p { font-size: 16px; }
-  .mascot-small { flex-basis: 85px; width: 85px; max-height: 100px; }
+  .section { padding: 48px 0; }
+  .section-heading { align-items: flex-start; gap: 10px; margin-bottom: 24px; }
+  .section-heading h2 { font-size: clamp(28px, 7.8vw, 36px); line-height: 1.2; }
+  .section-heading p { font-size: 15px; line-height: 1.55; }
+  .mascot-small { flex-basis: 72px; width: 72px; max-height: 86px; }
   .roadmap { grid-template-columns: 1fr; }
   .station, .station:last-child {
     grid-column: auto;
@@ -910,9 +964,14 @@ tbody tr:nth-child(even) { background: var(--page); }
   .decision-toggle { display: grid; }
   .lesson-footer { display: grid; }
   .lesson-footer .btn { width: 100%; }
-  .identity-grid, .worksheet-grid, .competency-grid, .teacher-steps { grid-template-columns: 1fr; }
+  .identity-grid, .worksheet-grid, .competency-grid, .teacher-steps, .process-grid { grid-template-columns: 1fr; }
   .competency-card { min-height: 350px; }
   .teacher-content { padding: 18px; }
+  .teacher-guide > summary { padding: 18px 20px; gap: 12px; font-size: clamp(20px, 6vw, 27px); line-height: 1.25; }
+  .teacher-guide > summary small { font-size: 10px; letter-spacing: .06em; }
+  .process-grid article { padding: 17px; }
+  .site-footer { padding: 42px 0; }
+  .footer-author { font-size: clamp(25px, 7.2vw, 33px); line-height: 1.25; }
   .footer-content { display: grid; }
   .footer-content .btn { width: fit-content; }
 }
@@ -922,6 +981,10 @@ tbody tr:nth-child(even) { background: var(--page); }
   #font-down, #sound-toggle { display: none; }
   .hero-inner { padding-top: 280px; }
   .btn { padding-inline: 14px; font-size: 13px; }
+  .section-heading { display: grid; grid-template-columns: 1fr auto; }
+  .section-heading.centered { grid-template-columns: 1fr; }
+  .section-heading h2 { font-size: clamp(27px, 8.4vw, 32px); }
+  .mascot-small { width: 62px; flex-basis: 62px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
